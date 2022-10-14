@@ -16,15 +16,14 @@ table = pd.read_csv("ccont_2t_AC_271020181441.csv", delimiter=';',encoding="wind
 municipio = table["NM_MUNICIPIO"]
 secoes = table["NR_ZONA"]
 
-'''for i in range(len(secoes)):
+for i in range(len(secoes)):
     c = colecao.insert_one({"seções": int(secoes[i])})
     print(c)
-'''
-'''
+
 for i in range(len(municipio)):
     c = colecao.insert_one({"municipios": str(municipio[i])})
     print(c)
-'''
+
 lista = []
 for i in range(len(municipio)):
     lista.append(str(municipio[i]))
